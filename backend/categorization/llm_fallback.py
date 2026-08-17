@@ -1,0 +1,39 @@
+import os
+from google import genai
+from dotenv import load_dotenv
+
+# Load the .env file so we can read GEMINI_API_KEY from it
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
+
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+
+MODEL_NAME = "gemini-3.5-flash-lite"
+
+VALID_CATEGORIES = [
+    "Food", "Travel", "Shopping", "Bills", "Entertainment",
+    "Groceries", "Salary", "Rent", "Other"
+]
+
+
+def categorize_with_llm(description: str) -> str:
+    """
+    Asks Gemini to categorize a transaction description.
+    Returns one of VALID_CATEGORIES.
+    """
+    prompt = f"""You are a financial transaction categorizer.
+Classify this bank transaction description into exactly ONE of these categories:
+{", ".join(VALID_CATEGORIES)}
+
+Transaction description: "{description}"
+
+Respond with ONLY the category name, nothing else. No explanation, no punctuation."""
+
+    response = client.models.generate_content(
+        model=MODEL_NAME,
+        contents=prompt
+    )
+    category = response.text.strip()
+
+    if category not in VALID_CATEGORIES:
+        return "Other"
+    return category
