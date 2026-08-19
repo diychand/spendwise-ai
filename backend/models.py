@@ -14,3 +14,4 @@ class Transaction(Base):
     category_source = Column(String, nullable=True)   # "rule", "ml", or "llm"
     is_anomaly = Column(Integer, default=0)            # 0 = normal, 1 = flagged
     created_at = Column(DateTime, default=datetime.utcnow)
+

@@ -3,9 +3,9 @@ import io
 from fastapi import APIRouter, UploadFile, File, Depends
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
-
 from database import get_db
 from models import Transaction
+from routers.categorization import retrain_ml_model
 
 router = APIRouter(prefix="/transactions", tags=["transactions"])
 
@@ -15,7 +15,6 @@ async def upload_transactions(file: UploadFile = File(...), db: Session = Depend
     contents = await file.read()
     decoded = contents.decode("utf-8")
     reader = csv.DictReader(io.StringIO(decoded))
-
     count = 0
     for row in reader:
         transaction = Transaction(
@@ -26,7 +25,6 @@ async def upload_transactions(file: UploadFile = File(...), db: Session = Depend
         )
         db.add(transaction)
         count += 1
-
     db.commit()
     return {"message": f"Uploaded {count} transactions successfully"}
 
@@ -44,7 +42,6 @@ class CorrectionRequest(BaseModel):
 @router.patch("/{transaction_id}/correct")
 def correct_transaction(transaction_id: int, request: CorrectionRequest, db: Session = Depends(get_db)):
     txn = db.query(Transaction).filter(Transaction.id == transaction_id).first()
-
     if not txn:
         return {"error": f"Transaction {transaction_id} not found"}
 
@@ -52,8 +49,12 @@ def correct_transaction(transaction_id: int, request: CorrectionRequest, db: Ses
     txn.category_source = "human"
     db.commit()
 
+    # Immediately retrain the ML model so this correction takes effect right away
+    retrain_result = retrain_ml_model(db)
+
     return {
         "message": f"Transaction {transaction_id} updated",
         "id": txn.id,
         "new_category": txn.category,
+        "retrain_result": retrain_result,
     }
