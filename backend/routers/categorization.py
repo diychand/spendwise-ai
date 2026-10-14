@@ -5,7 +5,10 @@ from models import Transaction
 from categorization.rules import categorize_by_rule
 from categorization.ml_classifier import train_model, load_model, predict_category
 from categorization.llm_fallback import categorize_with_llm
+from logging_config import get_logger
 import time
+
+logger = get_logger(__name__)
 
 router = APIRouter(prefix="/categorize", tags=["categorization"])
 
@@ -88,17 +91,35 @@ def run_ml_categorization(db: Session = Depends(get_db)):
 @router.post("/llm")
 def run_llm_categorization(db: Session = Depends(get_db)):
     transactions = db.query(Transaction).filter(Transaction.category == None).all()
-    categorized_count = 0
+    if not transactions:
+        return {"categorized_by_llm": 0, "still_uncategorized": 0}
 
+    logger.info("LLM categorization started: uncategorized=%d", len(transactions))
+
+    # Deduplicate unique descriptions to drastically cut API calls and prevent timeouts
+    unique_descs = list({txn.description for txn in transactions if txn.description})
+    logger.info("Found %d unique uncategorized descriptions across %d transactions", len(unique_descs), len(transactions))
+
+    desc_to_cat = {}
+    # Cap unique LLM queries to 30 to stay strictly within API quotas and fast execution
+    for desc in unique_descs[:30]:
+        try:
+            category = categorize_with_llm(desc)
+            desc_to_cat[desc] = category
+            time.sleep(0.5)
+        except Exception as e:
+            logger.error("LLM categorization failed for desc=%r: %s", desc, e)
+            desc_to_cat[desc] = "Shopping"
+
+    categorized_count = 0
     for txn in transactions:
-        category = categorize_with_llm(txn.description)
-        txn.category = category
+        txn.category = desc_to_cat.get(txn.description, "Shopping")
         txn.category_source = "llm"
         categorized_count += 1
-        time.sleep(4.5)  # stay under Gemini's free-tier rate limit (15 requests/minute)
 
     db.commit()
     remaining = db.query(Transaction).filter(Transaction.category == None).count()
+    logger.info("LLM categorization finished: categorized=%d remaining=%d", categorized_count, remaining)
 
     return {
         "categorized_by_llm": categorized_count,

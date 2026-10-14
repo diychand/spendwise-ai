@@ -1,8 +1,14 @@
 import os
+import time
+
 from google import genai
 from dotenv import load_dotenv
 
+from logging_config import get_logger
+
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
+
+logger = get_logger(__name__)
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 MODEL_NAME = "gemini-3.5-flash-lite"
@@ -44,13 +50,24 @@ Question: "What is my total spending on Food?"
 Code: result = df[(df["category"] == "Food") & (df["type"] == "DEBIT")]["amount"].sum()
 """
 
-    response = client.models.generate_content(
-        model=MODEL_NAME,
-        contents=prompt
-    )
+    logger.info("Gemini request -> task=pandas_code model=%s question=%r", MODEL_NAME, question)
+    logger.debug("Gemini prompt: %s", prompt)
+
+    start = time.perf_counter()
+    try:
+        response = client.models.generate_content(
+            model=MODEL_NAME,
+            contents=prompt
+        )
+    except Exception as e:
+        logger.error("Gemini pandas_code failed for %r: %s", question, e)
+        raise
+    elapsed = time.perf_counter() - start
+
     code = response.text.strip()
     code = code.replace("```python", "").replace("```", "").strip()
 
+    logger.info("Gemini response <- task=pandas_code code=%r latency=%.3fs", code, elapsed)
     return code
 
 
@@ -66,8 +83,21 @@ Write ONE short, natural sentence answering the user's question using this resul
 Format any money values with the Rupee symbol and commas (e.g. Rs. 12,450.00).
 Do not explain how the calculation was done - just state the answer clearly."""
 
-    response = client.models.generate_content(
-        model=MODEL_NAME,
-        contents=prompt
-    )
-    return response.text.strip()
+    logger.info("Gemini request -> task=explain model=%s question=%r", MODEL_NAME, question)
+    logger.debug("Gemini prompt: %s", prompt)
+
+    start = time.perf_counter()
+    try:
+        response = client.models.generate_content(
+            model=MODEL_NAME,
+            contents=prompt
+        )
+    except Exception as e:
+        logger.error("Gemini explain failed for %r: %s", question, e)
+        raise
+    elapsed = time.perf_counter() - start
+
+    answer = response.text.strip()
+
+    logger.info("Gemini response <- task=explain answer=%r latency=%.3fs", answer, elapsed)
+    return answer

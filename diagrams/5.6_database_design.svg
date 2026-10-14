@@ -1,0 +1,221 @@
+<svg viewBox="0 0 920 680" width="100%" height="680" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="db-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 9 5 L 0 9 z" fill="#1e3a8a"/>
+        </marker>
+        <filter id="dbShadow" x="-2%" y="-2%" width="104%" height="106%">
+            <feDropShadow dx="1" dy="2" stdDeviation="2.5" flood-opacity="0.12"/>
+        </filter>
+    </defs>
+
+    <rect width="920" height="680" fill="#f8fafc" rx="8"/>
+
+    <text x="460" y="35" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="15" font-weight="bold" text-anchor="middle">
+        RELATIONAL DATABASE DESIGN &amp; SCHEMA SPECIFICATION (SQLITE / SQLALCHEMY)
+    </text>
+
+    <!-- TABLE 1: transactions (Center Left) -->
+    <g transform="translate(40, 60)" filter="url(#dbShadow)">
+        <rect width="380" height="340" rx="6" fill="#ffffff" stroke="#1e3a8a" stroke-width="1.8"/>
+        <rect width="380" height="32" rx="6" fill="#1e3a8a"/>
+        <text x="190" y="21" fill="#ffffff" font-family="Times New Roman, serif" font-size="12" font-weight="bold" text-anchor="middle">
+            TABLE: transactions (Core Ledger Entity)
+        </text>
+
+        <!-- Column headers -->
+        <rect y="32" width="380" height="24" fill="#f1f5f9"/>
+        <text x="12" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Column Name</text>
+        <text x="135" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Data Type</text>
+        <text x="235" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Constraints &amp; Defaults</text>
+
+        <!-- Rows -->
+        <line x1="0" y1="56" x2="380" y2="56" stroke="#cbd5e1"/>
+        <text x="12" y="75" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">id</text>
+        <text x="135" y="75" fill="#334155" font-family="Times New Roman, serif" font-size="9">INTEGER</text>
+        <text x="235" y="75" fill="#15803d" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">PK, AUTOINCREMENT</text>
+
+        <line x1="0" y1="87" x2="380" y2="87" stroke="#e2e8f0"/>
+        <text x="12" y="106" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">date</text>
+        <text x="135" y="106" fill="#334155" font-family="Times New Roman, serif" font-size="9">VARCHAR(50)</text>
+        <text x="235" y="106" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8.5">NOT NULL, ISO YYYY-MM-DD</text>
+
+        <line x1="0" y1="118" x2="380" y2="118" stroke="#e2e8f0"/>
+        <text x="12" y="137" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">description</text>
+        <text x="135" y="137" fill="#334155" font-family="Times New Roman, serif" font-size="9">TEXT</text>
+        <text x="235" y="137" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8.5">NOT NULL, Raw Statement</text>
+
+        <line x1="0" y1="149" x2="380" y2="149" stroke="#e2e8f0"/>
+        <text x="12" y="168" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">amount</text>
+        <text x="135" y="168" fill="#334155" font-family="Times New Roman, serif" font-size="9">FLOAT</text>
+        <text x="235" y="168" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8.5">NOT NULL, CHECK (amount &gt; 0)</text>
+
+        <line x1="0" y1="180" x2="380" y2="180" stroke="#e2e8f0"/>
+        <text x="12" y="199" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">type</text>
+        <text x="135" y="199" fill="#334155" font-family="Times New Roman, serif" font-size="9">VARCHAR(20)</text>
+        <text x="235" y="199" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8.5">CHECK ('DEBIT', 'CREDIT')</text>
+
+        <line x1="0" y1="211" x2="380" y2="211" stroke="#e2e8f0"/>
+        <text x="12" y="230" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">category</text>
+        <text x="135" y="230" fill="#334155" font-family="Times New Roman, serif" font-size="9">VARCHAR(50)</text>
+        <text x="235" y="230" fill="#475569" font-family="Times New Roman, serif" font-size="8.5">DEFAULT 'Uncategorized'</text>
+
+        <line x1="0" y1="242" x2="380" y2="242" stroke="#e2e8f0"/>
+        <text x="12" y="261" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">is_anomaly</text>
+        <text x="135" y="261" fill="#334155" font-family="Times New Roman, serif" font-size="9">BOOLEAN</text>
+        <text x="235" y="261" fill="#475569" font-family="Times New Roman, serif" font-size="8.5">DEFAULT 0 (False)</text>
+
+        <line x1="0" y1="273" x2="380" y2="273" stroke="#e2e8f0"/>
+        <text x="12" y="292" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">anomaly_score</text>
+        <text x="135" y="292" fill="#334155" font-family="Times New Roman, serif" font-size="9">FLOAT</text>
+        <text x="235" y="292" fill="#475569" font-family="Times New Roman, serif" font-size="8.5">DEFAULT 0.0 (Path score)</text>
+
+        <line x1="0" y1="304" x2="380" y2="304" stroke="#e2e8f0"/>
+        <text x="12" y="323" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">user_id</text>
+        <text x="135" y="323" fill="#334155" font-family="Times New Roman, serif" font-size="9">INTEGER</text>
+        <text x="235" y="323" fill="#1d4ed8" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">FK -&gt; users.id, DEFAULT 1</text>
+    </g>
+
+    <!-- TABLE 2: rag_embeddings (Top Right) -->
+    <g transform="translate(500, 60)" filter="url(#dbShadow)">
+        <rect width="380" height="215" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+        <rect width="380" height="32" rx="6" fill="#7c3aed"/>
+        <text x="190" y="21" fill="#ffffff" font-family="Times New Roman, serif" font-size="12" font-weight="bold" text-anchor="middle">
+            TABLE: rag_embeddings (Vector Cache)
+        </text>
+
+        <!-- Column headers -->
+        <rect y="32" width="380" height="24" fill="#f5f3ff"/>
+        <text x="12" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Column Name</text>
+        <text x="135" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Data Type</text>
+        <text x="235" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Constraints &amp; Semantics</text>
+
+        <!-- Rows -->
+        <line x1="0" y1="56" x2="380" y2="56" stroke="#ddd6fe"/>
+        <text x="12" y="75" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">id</text>
+        <text x="135" y="75" fill="#334155" font-family="Times New Roman, serif" font-size="9">INTEGER</text>
+        <text x="235" y="75" fill="#15803d" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">PK, AUTOINCREMENT</text>
+
+        <line x1="0" y1="87" x2="380" y2="87" stroke="#ede9fe"/>
+        <text x="12" y="106" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">transaction_id</text>
+        <text x="135" y="106" fill="#334155" font-family="Times New Roman, serif" font-size="9">INTEGER</text>
+        <text x="235" y="106" fill="#1d4ed8" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">FK -&gt; transactions.id, UNIQUE</text>
+
+        <line x1="0" y1="118" x2="380" y2="118" stroke="#ede9fe"/>
+        <text x="12" y="137" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">chunk_text</text>
+        <text x="135" y="137" fill="#334155" font-family="Times New Roman, serif" font-size="9">TEXT</text>
+        <text x="235" y="137" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8.5">NOT NULL, Synthesized context</text>
+
+        <line x1="0" y1="149" x2="380" y2="149" stroke="#ede9fe"/>
+        <text x="12" y="168" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">embedding_blob</text>
+        <text x="135" y="168" fill="#334155" font-family="Times New Roman, serif" font-size="9">BLOB</text>
+        <text x="235" y="168" fill="#6b21a8" font-family="Times New Roman, serif" font-size="8.5">768-dim float32 array</text>
+
+        <line x1="0" y1="180" x2="380" y2="180" stroke="#ede9fe"/>
+        <text x="12" y="199" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">updated_at</text>
+        <text x="135" y="199" fill="#334155" font-family="Times New Roman, serif" font-size="9">TIMESTAMP</text>
+        <text x="235" y="199" fill="#475569" font-family="Times New Roman, serif" font-size="8.5">DEFAULT CURRENT_TIMESTAMP</text>
+    </g>
+
+    <!-- FOREIGN KEY CONNECTOR: transactions.id -> rag_embeddings.transaction_id -->
+    <path d="M 420 135 L 460 135 L 460 165 L 500 165" fill="none" stroke="#1d4ed8" stroke-width="2" marker-end="url(#db-arrow)"/>
+    <text x="465" y="152" fill="#1d4ed8" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">1:1 FK</text>
+
+    <!-- TABLE 3: category_rules (Bottom Left) -->
+    <g transform="translate(40, 440)" filter="url(#dbShadow)">
+        <rect width="380" height="210" rx="6" fill="#ffffff" stroke="#059669" stroke-width="1.8"/>
+        <rect width="380" height="32" rx="6" fill="#059669"/>
+        <text x="190" y="21" fill="#ffffff" font-family="Times New Roman, serif" font-size="12" font-weight="bold" text-anchor="middle">
+            TABLE: category_rules (Tier-1 Regex Store)
+        </text>
+
+        <rect y="32" width="380" height="24" fill="#ecfdf5"/>
+        <text x="12" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Column Name</text>
+        <text x="135" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Data Type</text>
+        <text x="235" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Constraints &amp; Notes</text>
+
+        <line x1="0" y1="56" x2="380" y2="56" stroke="#a7f3d0"/>
+        <text x="12" y="75" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">id</text>
+        <text x="135" y="75" fill="#334155" font-family="Times New Roman, serif" font-size="9">INTEGER</text>
+        <text x="235" y="75" fill="#15803d" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">PK, AUTOINCREMENT</text>
+
+        <line x1="0" y1="87" x2="380" y2="87" stroke="#d1fae5"/>
+        <text x="12" y="106" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">pattern</text>
+        <text x="135" y="106" fill="#334155" font-family="Times New Roman, serif" font-size="9">VARCHAR(150)</text>
+        <text x="235" y="106" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8.5">NOT NULL, Regex string</text>
+
+        <line x1="0" y1="118" x2="380" y2="118" stroke="#d1fae5"/>
+        <text x="12" y="137" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">category</text>
+        <text x="135" y="137" fill="#334155" font-family="Times New Roman, serif" font-size="9">VARCHAR(50)</text>
+        <text x="235" y="137" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8.5">NOT NULL, Target category</text>
+
+        <line x1="0" y1="149" x2="380" y2="149" stroke="#d1fae5"/>
+        <text x="12" y="168" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">priority</text>
+        <text x="135" y="168" fill="#334155" font-family="Times New Roman, serif" font-size="9">INTEGER</text>
+        <text x="235" y="168" fill="#475569" font-family="Times New Roman, serif" font-size="8.5">DEFAULT 1 (Evaluation order)</text>
+
+        <line x1="0" y1="180" x2="380" y2="180" stroke="#d1fae5"/>
+        <text x="12" y="199" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">is_active</text>
+        <text x="135" y="199" fill="#334155" font-family="Times New Roman, serif" font-size="9">BOOLEAN</text>
+        <text x="235" y="199" fill="#475569" font-family="Times New Roman, serif" font-size="8.5">DEFAULT 1 (Active toggle)</text>
+    </g>
+
+    <!-- TABLE 4: users & budget_goals (Bottom Right) -->
+    <g transform="translate(500, 320)" filter="url(#dbShadow)">
+        <rect width="380" height="330" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+        <rect width="380" height="32" rx="6" fill="#d97706"/>
+        <text x="190" y="21" fill="#ffffff" font-family="Times New Roman, serif" font-size="12" font-weight="bold" text-anchor="middle">
+            TABLE: users &amp; budget_goals (Settings Store)
+        </text>
+
+        <rect y="32" width="380" height="24" fill="#fffbeb"/>
+        <text x="12" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Column Name</text>
+        <text x="135" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Data Type</text>
+        <text x="235" y="48" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">Constraints &amp; Notes</text>
+
+        <line x1="0" y1="56" x2="380" y2="56" stroke="#fde68a"/>
+        <text x="12" y="75" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">id</text>
+        <text x="135" y="75" fill="#334155" font-family="Times New Roman, serif" font-size="9">INTEGER</text>
+        <text x="235" y="75" fill="#15803d" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">PK, AUTOINCREMENT</text>
+
+        <line x1="0" y1="87" x2="380" y2="87" stroke="#fef3c7"/>
+        <text x="12" y="106" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">username</text>
+        <text x="135" y="106" fill="#334155" font-family="Times New Roman, serif" font-size="9">VARCHAR(50)</text>
+        <text x="235" y="106" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8.5">NOT NULL, UNIQUE</text>
+
+        <line x1="0" y1="118" x2="380" y2="118" stroke="#fef3c7"/>
+        <text x="12" y="137" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">monthly_budget</text>
+        <text x="135" y="137" fill="#334155" font-family="Times New Roman, serif" font-size="9">FLOAT</text>
+        <text x="235" y="137" fill="#475569" font-family="Times New Roman, serif" font-size="8.5">Default spending cap</text>
+
+        <line x1="0" y1="149" x2="380" y2="149" stroke="#fef3c7"/>
+        <text x="12" y="168" fill="#0f172a" font-family="Times New Roman, serif" font-size="9">savings_target</text>
+        <text x="135" y="168" fill="#334155" font-family="Times New Roman, serif" font-size="9">FLOAT</text>
+        <text x="235" y="168" fill="#475569" font-family="Times New Roman, serif" font-size="8.5">Target % savings rate</text>
+
+        <!-- Subtable divider -->
+        <rect y="180" width="380" height="24" fill="#fef3c7"/>
+        <text x="190" y="196" fill="#92400e" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold" text-anchor="middle">
+            INDEXES &amp; PERFORMANCE OPTIMIZATIONS
+        </text>
+
+        <line x1="0" y1="204" x2="380" y2="204" stroke="#fde68a"/>
+        <text x="12" y="223" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">idx_tx_date</text>
+        <text x="135" y="223" fill="#475569" font-family="Times New Roman, serif" font-size="8">B-Tree on date</text>
+        <text x="235" y="223" fill="#059669" font-family="Times New Roman, serif" font-size="8">Sub-millisecond timeseries queries</text>
+
+        <line x1="0" y1="235" x2="380" y2="235" stroke="#fef3c7"/>
+        <text x="12" y="254" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">idx_tx_category</text>
+        <text x="135" y="254" fill="#475569" font-family="Times New Roman, serif" font-size="8">B-Tree on category</text>
+        <text x="235" y="254" fill="#059669" font-family="Times New Roman, serif" font-size="8">Instant group-by aggregations</text>
+
+        <line x1="0" y1="266" x2="380" y2="266" stroke="#fef3c7"/>
+        <text x="12" y="285" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">idx_rag_tx</text>
+        <text x="135" y="285" fill="#475569" font-family="Times New Roman, serif" font-size="8">Hash on transaction_id</text>
+        <text x="235" y="285" fill="#059669" font-family="Times New Roman, serif" font-size="8">Instant RAG vector retrieval</text>
+
+        <line x1="0" y1="297" x2="380" y2="297" stroke="#fef3c7"/>
+        <text x="12" y="316" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">Journal Mode</text>
+        <text x="135" y="316" fill="#475569" font-family="Times New Roman, serif" font-size="8">WAL (Write-Ahead Log)</text>
+        <text x="235" y="316" fill="#059669" font-family="Times New Roman, serif" font-size="8">High-concurrency read/write</text>
+    </g>
+</svg>

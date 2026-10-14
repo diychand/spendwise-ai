@@ -1,8 +1,12 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-# This creates (or connects to) a file called spendwise.db in your project folder
-DATABASE_URL = "sqlite:///./spendwise.db"
+import os
+from pathlib import Path
+
+# This creates (or connects to) spendwise.db located in the backend folder
+DB_PATH = Path(__file__).resolve().parent / "spendwise.db"
+DATABASE_URL = f"sqlite:///{DB_PATH.as_posix()}"
 
 engine = create_engine(
     DATABASE_URL, connect_args={"check_same_thread": False, "timeout": 15}

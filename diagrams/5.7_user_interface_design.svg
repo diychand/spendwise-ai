@@ -1,0 +1,197 @@
+<svg viewBox="0 0 960 920" width="100%" height="920" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="uiShadow" x="-2%" y="-2%" width="104%" height="106%">
+            <feDropShadow dx="1" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+        </filter>
+    </defs>
+
+    <rect width="960" height="920" fill="#f1f5f9" rx="10"/>
+
+    <!-- Browser Window Container -->
+    <rect x="25" y="20" width="910" height="880" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2" filter="url(#uiShadow)"/>
+
+    <!-- Browser Top Bar -->
+    <rect x="25" y="20" width="910" height="42" rx="8" fill="#f8fafc"/>
+    <circle cx="50" cy="41" r="6" fill="#ef4444"/>
+    <circle cx="70" cy="41" r="6" fill="#f59e0b"/>
+    <circle cx="90" cy="41" r="6" fill="#10b981"/>
+
+    <!-- URL Bar -->
+    <rect x="130" y="28" width="600" height="26" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="145" y="45" fill="#059669" font-family="-apple-system, sans-serif" font-size="10" font-weight="bold">&bull; https://</text>
+    <text x="195" y="45" fill="#334155" font-family="-apple-system, sans-serif" font-size="10.5">localhost:8501 - SpendWise AI: Autonomous Financial Copilot</text>
+
+    <!-- SIDEBAR (LEFT) -->
+    <rect x="25" y="62" width="220" height="838" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <!-- Sidebar Branding -->
+    <rect x="40" y="80" width="190" height="45" rx="6" fill="#1e3a8a"/>
+    <text x="135" y="102" fill="#ffffff" font-family="Times New Roman, serif" font-size="13" font-weight="bold" text-anchor="middle">SPENDWISE AI</text>
+    <text x="135" y="117" fill="#bfdbfe" font-family="Times New Roman, serif" font-size="8.5" text-anchor="middle">Financial Intelligence Copilot</text>
+
+    <!-- Upload Statement Box -->
+    <rect x="40" y="145" width="190" height="110" rx="6" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="135" y="175" fill="#2563eb" font-family="Times New Roman, serif" font-size="11" font-weight="bold" text-anchor="middle">+ UPLOAD CSV</text>
+    <text x="135" y="195" fill="#64748b" font-family="Times New Roman, serif" font-size="8.5" text-anchor="middle">Drag &amp; drop bank statement</text>
+    <text x="135" y="210" fill="#64748b" font-family="Times New Roman, serif" font-size="8" text-anchor="middle">Auto-detects delimiters &amp; format</text>
+    <rect x="65" y="222" width="140" height="22" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="135" y="237" fill="#1d4ed8" font-family="Times New Roman, serif" font-size="8" font-weight="bold" text-anchor="middle">bank_statement_nov.csv &check;</text>
+
+    <!-- Run Audit Button -->
+    <rect x="40" y="270" width="190" height="38" rx="6" fill="#2563eb"/>
+    <text x="135" y="294" fill="#ffffff" font-family="Times New Roman, serif" font-size="11" font-weight="bold" text-anchor="middle">&blacktriangleright; RUN FULL AUDIT</text>
+
+    <!-- Filters & Settings -->
+    <text x="45" y="335" fill="#0f172a" font-family="Times New Roman, serif" font-size="10.5" font-weight="bold">AUDIT CONTROLS:</text>
+    <rect x="40" y="348" width="190" height="26" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="50" y="365" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">Date: Nov 01, 2026 - Nov 30, 2026</text>
+
+    <rect x="40" y="382" width="190" height="26" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="50" y="399" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">Categories: All 14 Selected</text>
+
+    <!-- System Status Badges in Sidebar -->
+    <text x="45" y="445" fill="#0f172a" font-family="Times New Roman, serif" font-size="10" font-weight="bold">MICROSERVICE HEALTH:</text>
+    <circle cx="52" cy="465" r="4" fill="#10b981"/>
+    <text x="65" y="468" fill="#166534" font-family="Times New Roman, serif" font-size="8.5">FastAPI Backend: Online (:8000)</text>
+
+    <circle cx="52" cy="485" r="4" fill="#10b981"/>
+    <text x="65" y="488" fill="#166534" font-family="Times New Roman, serif" font-size="8.5">SQLite DB: Connected (ACID)</text>
+
+    <circle cx="52" cy="505" r="4" fill="#10b981"/>
+    <text x="65" y="508" fill="#166534" font-family="Times New Roman, serif" font-size="8.5">Gemini 2.5 Flash: Ready</text>
+
+    <circle cx="52" cy="525" r="4" fill="#10b981"/>
+    <text x="65" y="528" fill="#166534" font-family="Times New Roman, serif" font-size="8.5">RAG Vector Cache: 1,000 Embeds</text>
+
+    <!-- MAIN DASHBOARD CONTENT AREA -->
+    <!-- KPI CARDS ROW -->
+    <rect x="260" y="75" width="150" height="65" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+    <text x="335" y="95" fill="#166534" font-family="Times New Roman, serif" font-size="9" font-weight="bold" text-anchor="middle">TOTAL CASH INFLOW</text>
+    <text x="335" y="120" fill="#15803d" font-family="Times New Roman, serif" font-size="15" font-weight="bold" text-anchor="middle">$12,450.00</text>
+    <text x="335" y="133" fill="#166534" font-family="Times New Roman, serif" font-size="7.5" text-anchor="middle">+8.2% vs last month</text>
+
+    <rect x="425" y="75" width="150" height="65" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.2"/>
+    <text x="500" y="95" fill="#991b1b" font-family="Times New Roman, serif" font-size="9" font-weight="bold" text-anchor="middle">TOTAL CASH OUTFLOW</text>
+    <text x="500" y="120" fill="#b91c1c" font-family="Times New Roman, serif" font-size="15" font-weight="bold" text-anchor="middle">$4,820.50</text>
+    <text x="500" y="133" fill="#991b1b" font-family="Times New Roman, serif" font-size="7.5" text-anchor="middle">-4.1% vs last month</text>
+
+    <rect x="590" y="75" width="150" height="65" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+    <text x="665" y="95" fill="#1e40af" font-family="Times New Roman, serif" font-size="9" font-weight="bold" text-anchor="middle">NET SAVINGS</text>
+    <text x="665" y="120" fill="#1d4ed8" font-family="Times New Roman, serif" font-size="15" font-weight="bold" text-anchor="middle">+$7,629.50</text>
+    <text x="665" y="133" fill="#1e40af" font-family="Times New Roman, serif" font-size="7.5" text-anchor="middle">Savings Rate: 61.3%</text>
+
+    <rect x="755" y="75" width="165" height="65" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+    <text x="837" y="95" fill="#92400e" font-family="Times New Roman, serif" font-size="9" font-weight="bold" text-anchor="middle">ANOMALIES FLAGGED</text>
+    <text x="837" y="120" fill="#b45309" font-family="Times New Roman, serif" font-size="15" font-weight="bold" text-anchor="middle">3 Outliers</text>
+    <text x="837" y="133" fill="#92400e" font-family="Times New Roman, serif" font-size="7.5" text-anchor="middle">Action Required</text>
+
+    <!-- MIDDLE ROW: TWO ANALYTICAL PANELS -->
+    <!-- Donut Chart Box (Left) -->
+    <rect x="260" y="152" width="315" height="175" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="417" y="172" fill="#0f172a" font-family="Times New Roman, serif" font-size="10.5" font-weight="bold" text-anchor="middle">
+        EXPENSE CATEGORY BREAKDOWN
+    </text>
+    <!-- Donut SVG Mockup -->
+    <circle cx="340" cy="245" r="48" fill="none" stroke="#2563eb" stroke-width="18" stroke-dasharray="140 160"/>
+    <circle cx="340" cy="245" r="48" fill="none" stroke="#10b981" stroke-width="18" stroke-dasharray="60 240" stroke-dashoffset="-140"/>
+    <circle cx="340" cy="245" r="48" fill="none" stroke="#f59e0b" stroke-width="18" stroke-dasharray="50 250" stroke-dashoffset="-200"/>
+    <circle cx="340" cy="245" r="48" fill="none" stroke="#a855f7" stroke-width="18" stroke-dasharray="40 260" stroke-dashoffset="-250"/>
+    <text x="340" y="249" fill="#0f172a" font-family="Times New Roman, serif" font-size="10" font-weight="bold" text-anchor="middle">Food 34%</text>
+
+    <text x="425" y="215" fill="#2563eb" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">&bull; Food &amp; Dining: $1,642</text>
+    <text x="425" y="235" fill="#10b981" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">&bull; Housing &amp; Rent: $1,200</text>
+    <text x="425" y="255" fill="#f59e0b" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">&bull; Utilities &amp; Phone: $865</text>
+    <text x="425" y="275" fill="#a855f7" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">&bull; Shopping: $720</text>
+    <text x="425" y="295" fill="#64748b" font-family="Times New Roman, serif" font-size="8.5">&bull; Other: $393.50</text>
+
+    <!-- Anomaly Table Box (Right) -->
+    <rect x="590" y="152" width="330" height="175" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1.2"/>
+    <rect x="590" y="152" width="330" height="26" rx="6" fill="#fef2f2"/>
+    <text x="755" y="169" fill="#991b1b" font-family="Times New Roman, serif" font-size="10.5" font-weight="bold" text-anchor="middle">
+        &bull; ANOMALY ALERTS (ISOLATION FOREST + Z-SCORE)
+    </text>
+
+    <text x="605" y="195" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">1. 2026-11-14: LUXURY CARTIER JEWELRY</text>
+    <text x="620" y="209" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8">Amount: $1,450.00 | Category: Shopping | Z-Score: 4.2 (High Spike)</text>
+
+    <text x="605" y="235" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">2. 2026-11-18: ADOBE CREATIVE CLOUD</text>
+    <text x="620" y="249" fill="#b45309" font-family="Times New Roman, serif" font-size="8">Amount: $89.99 | Warning: Duplicate debit on same posting date!</text>
+
+    <text x="605" y="275" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">3. 2026-11-22: ELECTRONICS WAREHOUSE</text>
+    <text x="620" y="289" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8">Amount: $840.00 | Path Score: 0.74 (Unusual merchant node)</text>
+
+    <!-- BOTTOM SECTION: CLAUDE-STYLE PINNED CHAT INTERFACE -->
+    <rect x="260" y="340" width="660" height="540" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    
+    <!-- Chat Header -->
+    <rect x="260" y="340" width="660" height="32" rx="8" fill="#eff6ff"/>
+    <text x="275" y="361" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="11" font-weight="bold">
+        FINANCIAL ADVISORY AGENT (CLAUDE-STYLE PINNED CONVERSATION)
+    </text>
+
+    <!-- Upward Stacking Chat History Area -->
+    <!-- Message 1: User -->
+    <rect x="420" y="385" width="485" height="42" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+    <text x="435" y="403" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">User:</text>
+    <text x="435" y="417" fill="#1e293b" font-family="Times New Roman, serif" font-size="8.5">
+        What subscriptions am I paying for this month, and how can I save $100?
+    </text>
+
+    <!-- Message 2: Assistant (SpendWise AI Grounded) -->
+    <rect x="275" y="438" width="630" height="230" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#uiShadow)"/>
+    <rect x="275" y="438" width="630" height="24" rx="10" fill="#f0fdf4"/>
+    <text x="290" y="454" fill="#047857" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">
+        SpendWise AI &bull; Hybrid Contextual RAG Verified
+    </text>
+    <text x="290" y="478" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5">
+        Based on your verified ledger from November 2026, you have <strong>4 active recurring subscriptions</strong> totaling <strong>$349.97</strong>:
+    </text>
+
+    <!-- Table of Subscriptions -->
+    <rect x="290" y="490" width="600" height="85" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="305" y="508" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">&bull; Netflix 4K Premium:</text>
+    <text x="500" y="508" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">$22.99 / mo (Billed on 4th)</text>
+    <text x="700" y="508" fill="#059669" font-family="Times New Roman, serif" font-size="8">Status: Normal</text>
+
+    <text x="305" y="528" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">&bull; Adobe Creative Cloud:</text>
+    <text x="500" y="528" fill="#b91c1c" font-family="Times New Roman, serif" font-size="8.5">$89.99 / mo (&times;2 charges flagged!)</text>
+    <text x="700" y="528" fill="#dc2626" font-family="Times New Roman, serif" font-size="8" font-weight="bold">DUPLICATE ALERT</text>
+
+    <text x="305" y="548" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">&bull; Equinox Fitness Club:</text>
+    <text x="500" y="548" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">$220.00 / mo (Billed on 1st)</text>
+    <text x="700" y="548" fill="#059669" font-family="Times New Roman, serif" font-size="8">Status: Normal</text>
+
+    <text x="305" y="568" fill="#0f172a" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">&bull; Spotify Family Plan:</text>
+    <text x="500" y="568" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">$16.99 / mo (Billed on 22nd)</text>
+    <text x="700" y="568" fill="#059669" font-family="Times New Roman, serif" font-size="8">Status: Normal</text>
+
+    <text x="290" y="595" fill="#15803d" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold">
+        Recommended Saving Actions (Net Savings: +$102.99 / month):
+    </text>
+    <text x="290" y="612" fill="#0f172a" font-family="Times New Roman, serif" font-size="8">
+        1. <strong>Dispute Duplicate Debit:</strong> Request a refund of the $89.99 second Adobe debit posted on Nov 18.
+    </text>
+    <text x="290" y="628" fill="#0f172a" font-family="Times New Roman, serif" font-size="8">
+        2. <strong>Downgrade Plan:</strong> Switching Netflix from 4K Premium ($22.99) to Standard ($15.49) saves an extra $7.50/mo.
+    </text>
+    <text x="290" y="650" fill="#64748b" font-family="Times New Roman, serif" font-size="7.5" font-style="italic">
+        [Factual Grounding: 4 ledger items retrieved via BM25 + Gemini Dense Vectors, RRF score 0.0321, CRAG: Verified High Confidence]
+    </text>
+
+    <!-- Auto-scroll indicator -->
+    <text x="590" y="730" fill="#94a3b8" font-family="Times New Roman, serif" font-size="8" text-anchor="middle">
+        [Conversation stacks upward automatically &bull; View remains anchored to latest message]
+    </text>
+
+    <!-- FIXED PINNED BOTTOM INPUT BAR (CLAUDE PATTERN) -->
+    <rect x="280" y="805" width="620" height="52" rx="26" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#uiShadow)"/>
+    <text x="315" y="836" fill="#94a3b8" font-family="Times New Roman, serif" font-size="9.5">
+        Ask a financial question about your ledger (e.g., Can I afford a $600 flight?)...
+    </text>
+    <!-- Send Button (Circle) -->
+    <circle cx="875" cy="831" r="18" fill="#2563eb"/>
+    <path d="M 868 831 L 880 824 L 880 838 z" fill="#ffffff"/>
+    <text x="590" y="872" fill="#64748b" font-family="Times New Roman, serif" font-size="8" text-anchor="middle">
+        Pinned Bottom Bar (st.chat_input) &bull; Remains stationary during chat history expansion
+    </text>
+</svg>

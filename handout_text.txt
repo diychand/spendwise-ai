@@ -1,0 +1,308 @@
+################### PAGE 1 ###################
+1 
+ 
+DEPARTMENT OF COMPUTER APPLICATIONS 
+HANDOUT FOR PG PROJECT REPORT-2026-2027 
+ 
+ 
+This handout gives the suggested contents of the project report and the 
+suggested style and layout for your team project. 
+ 
+Important Points to Ponder: 
+ 
+● The project report should be submitted in A4 size Bond paper. Number of 
+copies to be submitted: Two (One for Department Library, One for Internal 
+Guide) and One copy for students.   
+● General Instruction: 
+The following report format is applicable to all project types, including 
+Software Application, Web/Mobile Application, Machine Learning, Deep 
+Learning, Artificial Intelligence, Data Science and related projects. 
+● Students shall follow the common chapter structure given below. The 
+contents within each chapter should be presented according to the nature 
+and requirements of the project. 
+● Where multiple alternatives are provided using “/”, students should 
+include the relevant component(s) applicable to their project. Sections 
+that are not relevant to a particular project may be omitted with the 
+approval of the project guide. 
+● For Software/Application-based projects, emphasis should be given to 
+system requirements, system design, UML/DFD/ER diagrams, database 
+design, modules, user interface and software testing. 
+● For Machine Learning/Deep Learning/AI-based projects, emphasis 
+should be given to dataset description, data collection, preprocessing, 
+feature engineering/extraction, model/algorithm design, training, 
+validation, evaluation metrics, performance analysis and prediction 
+results. 
+● Where applicable, AI projects may also include software components such 
+as user interface, database, API and deployment. 
+● The report should clearly describe the problem, objectives, methodology, 
+implementation, testing/evaluation, results, limitations and future 
+enhancements of the project. 
+● Students should not include irrelevant sections merely to satisfy the 
+format. The project report should reflect the actual work carried out by 
+the student. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+################### PAGE 2 ###################
+2 
+ 
+Paper, Typing, Format: 
+ 
+● Bond paper (A4 size) should be used for the preparation of the project 
+report. Typing should be done on one side of the paper with character font 
+in Times New Roman-size 12 , Headings in Size-14 and subheadings in 
+Size-13. The layout should provide a margi n of 4 cm on the left, 3 cm on 
+the top and bottom and 2 cm on the right. 
+i.e. Left margin space 4 cm  
+      Top and bottom margin space  3 cm 
+      Right margin space 2 cm 
+● A fresh paragraph should commence after five spaces . One and half 
+spacing shall be used for typing the general text. 
+● The page numbers should be indicated at the bottom-middle of each page. 
+● Should NOT underline the heading/subheadings and should NOT put 
+colons   ( : ) in headings or subheadings 
+● Minimum Number of pages must be 60 pages. 
+ 
+Binding 
+ 
+● The project report shall be properly bound, using Rexene of black colour. 
+The bound front cover should indicate in suitable embossed letter the 
+following: 
+(Format for the front pages (1,2,3,) will be forwarded) 
+Page One 
+ Title Page 
+Page Two 
+Bonafide Certificate 
+Page Three 
+ Acknowledgement 
+Page Four 
+ Acknowledgement 
+Page Five 
+            Project Completion Certificate             
+Page Six 
+ Plagiarism Certificate 
+****** No Page numbers to be given for the above 5 pages****** 
+Page Seven 
+ Table of Contents 
+Page Eight 
+● Abstract 
+Abstract should be an essay type of narrative not exceeding 600 
+words, outlining the problem, the methodology used for tackling it and a 
+summary of the findings. 
+Page Nine 
+●  List of tables  
+Page Ten 
+● List of figures 
+
+################### PAGE 3 ###################
+3 
+ 
+ 
+Important Note: 
+ 
+▪  All the above pages are to be numbered in Roman numerals of lower case. 
+Ex. vi,vii, etc., 
+ 
+▪  The BELOW document pages must be numbered using numbers i.e. 
+1,2,3…… 
+ 
+ 
+ 
+Arrangement of Chapters depending upon the project 
+ 
+The following is suggested format for arranging the project report matter into 
+various chapters: 
+Chapter 1 – Introduction 
+1.1 Background of the Study 
+1.2 Problem Statement 
+1.3 Objectives of the Project 
+1.4 Scope of the Project 
+1.5 Significance of the Project 
+Chapter 2 – Literature Survey / Existing Studies 
+2.1 Review of Existing Systems / Research Works 
+2.2 Comparative Analysis 
+2.3 Research Gap / Limitations of Existing System 
+2.4 Proposed System / Proposed Approach 
+For software projects: Existing System and Proposed System 
+For AI projects: Existing Research, Research Gap and Proposed AI/ML/DL 
+Approach 
+Chapter 3 – Software Requirement Analysis 
+3.1 Hardware Specification 
+3.2 Software Specification 
+3.3 Software / Tools and Their Features 
+Chapter 4 – System Analysis 
+4.1 Requirement Specification 
+4.2 Characteristics of Existing System 
+4.3 Proposed System / Proposed Approach 
+4.4 Feasibility Study 
+4.5 Software Requirement Specification 
+Chapter 5 – System Design 
+
+################### PAGE 4 ###################
+4 
+ 
+5.1 System Architecture / Overall Workflow 
+5.2 Context Diagram 
+5.3 Use Case Diagram 
+5.4 Activity Diagram / State Diagram / UML Diagram 
+5.5 Data Flow Diagram / ER Diagram / Class Diagram / ML Workflow 
+5.6 Database Design / Dataset Design 
+5.7 User Interface Design 
+Chapter 6 – System Implementation 
+6.1 Modules Description 
+6.2 Dataset Description / Data Collection (if applicable) 
+6.3 Data Preprocessing (if applicable) 
+6.4 Feature Engineering / Feature Extraction (if applicable) 
+6.5 Model Architecture / Algorithm Design (if applicable) 
+6.6 System / Model Implementation 
+6.7 Validation Checks 
+6.8 User Interface Implementation (if applicable) 
+Chapter 7 – Testing and Evaluation 
+7.1 Test Cases 
+7.2 Unit Testing 
+7.3 Integration Testing 
+7.4 System Testing (if applicable) 
+7.5 Model Evaluation / Performance Evaluation (if applicable) 
+7.6 Performance Metrics (if applicable) 
+7.7 Comparative Analysis (if applicable) 
+Chapter 8 – Results and Conclusion 
+8.1 Results 
+8.2 Discussion / Analysis 
+8.3 Limitations 
+8.4 Lessons Learnt 
+8.5 Conclusion 
+8.6 Future Enhancements 
+Chapter 9 – Appendices 
+Appendix 1 – Plagiarism Certificate 
+Appendix 2 – Screenshots 
+Appendix 3 – Sample Coding 
+Appendix 4 – User Documentation 
+i) Installation Instructions 
+ii) README / Instructions for Using the System 
+Appendix 5 – Glossary 
+Appendix 6 – Journal Paper Published (if applicable) 
+Appendix 7 – Conference Certificate (if applicable) 
+
+################### PAGE 5 ###################
+5 
+ 
+Chapter 10 – Bibliography / References 
+ 
+ 
+Arrangement of Paragraph in a Chapter: 
+ 
+● Each paragraph in a chapter should be properly numbered for example, 2.1, 
+2.2 etc., where the first digit represents the Chapter Number and second 
+digit the paragraph number. There is no need to indicate the number for 
+the first paragraph in a chapter. 
+● Sub-paragraphs, if any indicated as 1.1.1, 1.1.2 etc. i.e. first digit 
+representing the chapter, the second representing the paragraph and third 
+representing the sub-paragraph. 
+● Don’t underline the headings or subheadings or side heading. Instead 
+use the bold letters. 
+ 
+Photographs/Figures and Tables 
+ 
+● The figures, photographs and tables occurring in a chapter may be serially 
+numbered as Fig. 1.1, 1.2 etc., where the first digit represents the chapter, 
+the second digit represents Figure number. 
+● The photographs ma y be represented as Photo 1.1, 1.2 etc., the first digit 
+representing chapter and the second digit represents Photograph number. 
+● The tables may be represented as Table 1.1, 1.2 etc., the first digit 
+representing chapter and the second digit represents table number. 
+ 
+Graphs 
+ 
+● The graph should clearly indicate the points, which are used for drawing 
+the curve or curves.  
+All the letters in the graphs should be written with stencils. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+################### PAGE 6 ###################
+6 
+ 
+Bibliography or References: 
+ 
+Bibliography / References 
+The following format may be used for writing the Bibliography/References. 
+Students should provide complete details of all books, research papers, 
+conference papers, websites, datasets, software documentation and other 
+sources referred to during the project. 
+General Format 
+Author Name, Title, Publisher/Journal/Conference Name, Year. 
+1. Book 
+Format: 
+Author(s). Title of the Book. Publisher, Year. 
+Example: 
+[1]. Russell, Stuart, and Peter Norvig. Artificial Intelligence: A Modern Approach. 
+Pearson, 2021. 
+2. Journal Article 
+Format: 
+Author(s). "Title of the Article." Journal Name, Volume, Issue, Year, Pages. 
+Example: 
+[2]. He, Kaiming, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. "Deep Residual 
+Learning for Image Recognition." IEEE Conference on Computer Vision and 
+Pattern Recognition, 2016, pp. 770–778. 
+3. Conference Paper 
+Format: 
+Author(s). "Title of the Paper." Conference Name, Year, Pages. 
+Example: 
+[3]. Tan, Mingxing, and Quoc V. Le. "EfficientNet: Rethinking Model Scaling for 
+Convolutional Neural Networks." Proceedings of the International Conference on 
+Machine Learning, 2019, pp. 6105–6114. 
+4. Website 
+Format: 
+
+################### PAGE 7 ###################
+7 
+ 
+Organization/Author. "Title of Web Page." Website Name, Year. URL. Accessed 
+Day Month Year. 
+Example: 
+[4]. TensorFlow. "TensorFlow Documentation." TensorFlow, 
+https://www.tensorflow.org/. Accessed 20 September 2026. 
+5. Dataset 
+For ML/DL/AI projects, students should also cite the dataset used. 
+Format: 
+Author/Organization. Dataset Name. Repository/Platform, Year. URL. 
+Example: 
+[5]. University of California, Irvine. UCI Machine Learning Repository. University 
+of California, Irvine, https://archive.ics.uci.edu/. 
+6. Software / Framework Documentation 
+For projects using tools such as TensorFlow, PyTorch, Scikit-learn, OpenCV, 
+Keras, etc., the relevant documentation may be cited. 
+Example: 
+[6]. Scikit-learn Developers. Scikit-learn User Guide. https://scikit-learn.org/. 
+ 
+References should be cited in the text using the author's surname and year of 
+publication. 
+Example: (He et al., 2016) or (Russell & Norvig, 2021). 
+For a numbered style: 
+References may also be cited using the reference number, e.g., [1], [2]. 
+ 
+● The bibliography list should be made strictly in alphabetical order of 
+the name of the authors. 
+ 
+ 
+

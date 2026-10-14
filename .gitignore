@@ -5,4 +5,5 @@ venv/
 spendwise.db
 __pycache__/
 *.pyc
+logs/
 "@ | Out-File -FilePath ".gitignore" -Encoding utf8

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "budget_50_30_20",
+    "title": "50/30/20 Budgeting Framework",
+    "category": "budgeting",
+    "summary": "Allocate 50% of after-tax income to Needs, 30% to Wants, and 20% to Savings/Investments.",
+    "key_rules": [
+      "Needs (max 50%): Housing/Rent, Utilities, Groceries, Minimum Debt Payments, Essential Commute.",
+      "Wants (max 30%): Dining Out, Swiggy/Zomato, Shopping, Entertainment, Subscriptions, Vacations.",
+      "Savings & Debt (min 20%): Emergency fund, SIPs, Mutual Funds, Retirement, Accelerated Debt Repayment."
+    ],
+    "detailed_guidance": "If Wants exceed 30%, focus cuts on Food Delivery and Shopping first, as they represent the most flexible discretionary line items. A healthy financial foundation requires maintaining at least a 20% savings rate before expanding lifestyle or taking on new debt.",
+    "search_keywords": ["50/30/20", "budget rule", "needs vs wants", "discretionary spending", "ideal savings rate", "overspending", "budget split", "allocation"]
+  },
+  {
+    "id": "emergency_fund_sizing",
+    "title": "Emergency Fund Sizing & Liquidity",
+    "category": "emergency_fund",
+    "summary": "Maintain a liquid reserve equal to 3 to 6 months of mandatory living expenses (Needs).",
+    "key_rules": [
+      "Salaried stable employment: 3 to 6 months of monthly essential expenses (Rent + Bills + Groceries).",
+      "Freelancers / Variable income: 6 to 9 months of essential expenses.",
+      "Store exclusively in high-liquidity instruments: Sweep-in FDs, High-yield Savings Account, or Liquid Mutual Funds. Never lock in volatile equities."
+    ],
+    "detailed_guidance": "Do not compute emergency funds as a multiple of total gross income, but as a multiple of unavoidable monthly expenses (Needs). If monthly needs are ₹15,000, a 3-month fund is ₹45,000 and 6-month is ₹90,000. Keep this strictly separate from spending accounts.",
+    "search_keywords": ["emergency fund", "contingency", "liquid savings", "rainy day fund", "safety net", "job loss fund", "3 months expenses"]
+  },
+  {
+    "id": "vehicle_purchase_20_4_10",
+    "title": "20/4/10 Rule for Vehicle & Car Purchases",
+    "category": "vehicle_and_assets",
+    "summary": "Never exceed 20% down payment, 4-year loan tenure, and 10% of gross monthly income on total transportation costs.",
+    "key_rules": [
+      "20% Minimum Down Payment in cash: Never take 90% or 100% financing as depreciation causes negative equity.",
+      "4 Years Maximum Loan Term: Longer tenures (5-7 years) dramatically inflate total interest paid.",
+      "10% Maximum Income Ceiling: Total monthly transportation expense (EMI + Fuel + Insurance + Maintenance) should not exceed 10% of monthly income."
+    ],
+    "detailed_guidance": "For an individual earning ₹28,000/month, the maximum total monthly vehicle expense under 20/4/10 should not exceed ₹2,800/mo. Purchasing a ₹6,00,000 to ₹10,00,000 car yields EMIs of ₹10,000 to ₹16,800+, which amounts to 35% to 60% of their total income. Such a purchase risks debt entrapment unless income grows substantially or a reliable pre-owned vehicle (under ₹2,00,000) is chosen.",
+    "search_keywords": ["car", "vehicle", "auto loan", "emi", "buy a car", "20/4/10", "down payment", "bike loan", "car purchase", "four wheeler"]
+  },
+  {
+    "id": "debt_payoff_avalanche_vs_snowball",
+    "title": "Debt Payoff Strategies: Avalanche vs Snowball",
+    "category": "debt",
+    "summary": "Use Avalanche for maximum mathematical interest savings, or Snowball for quick psychological wins.",
+    "key_rules": [
+      "Debt Avalanche: Pay minimums on all debts, allocate all surplus cash to the loan with the HIGHEST interest rate (e.g. Credit card 36-42%, Personal loans 14-18%).",
+      "Debt Snowball: Pay minimums on all debts, allocate surplus cash to the loan with the SMALLEST balance first for psychological momentum.",
+      "Never invest in equity or discretionary items while carrying high-interest revolving credit card balances exceeding 18% p.a."
+    ],
+    "detailed_guidance": "Credit card revolving interest (typically 36% to 42% APR in India) compounds daily. Every rupee put toward credit card debt delivers a guaranteed risk-free return of 36%+, outperforming any market investment.",
+    "search_keywords": ["debt", "credit card", "loan", "avalanche", "snowball", "interest rate", "pay off debt", "credit card debt"]
+  },
+  {
+    "id": "discretionary_expense_reduction",
+    "title": "Tiered Discretionary Expense Reduction Protocol",
+    "category": "budgeting",
+    "summary": "Achieve financial targets through structured 15%, 25%, or 35% cuts on flexible spending categories.",
+    "key_rules": [
+      "Tier 1 (Gentle - 15% cut): Cancel unused subscriptions, limit weekend dining out to twice a month, swap 2 cab rides per week for public transit.",
+      "Tier 2 (Moderate - 25% cut): Cook weekday dinners, pack work lunches, set a monthly hard ceiling on food delivery apps (Swiggy/Zomato), pause non-essential online shopping.",
+      "Tier 3 (Aggressive - 35% cut): Full 30-day dining freeze, zero discretionary shopping, substitute all leisure activities with free alternatives."
+    ],
+    "detailed_guidance": "Fixed expenses (rent, utility contracts) are hard to reduce quickly. Discretionary spending on Food delivery (Swiggy, Zomato, cafes) and Shopping (Amazon, clothing) responds immediately to behavioral changes and yields instant cash surplus within the first billing cycle.",
+    "search_keywords": ["cut expenses", "save more", "reduce spending", "cut food", "save money fast", "swiggy", "zomato", "dining out", "discretionary"]
+  },
+  {
+    "id": "sinking_funds",
+    "title": "Sinking Funds for Predictable Irregular Expenses",
+    "category": "budgeting",
+    "summary": "Prevent budget blowouts by dividing predictable annual or periodic expenses into monthly savings deposits.",
+    "key_rules": [
+      "Calculate total annual irregular costs: Vehicle insurance, festival shopping, electronics upgrade, medical checkups.",
+      "Divide the annual total by 12 and automate a monthly transfer into a designated recurring deposit or savings bucket.",
+      "Never draw from the Emergency Fund for predictable recurring annual expenses."
+    ],
+    "detailed_guidance": "Festivals, insurance renewals, and annual gadget maintenance are not financial emergencies—they occur predictably every 12 months. Sinking funds smooth out monthly cash flow volatility.",
+    "search_keywords": ["sinking fund", "annual expense", "insurance renewal", "festival budget", "planned purchase", "irregular costs"]
+  },
+  {
+    "id": "medium_goal_cash_accumulation",
+    "title": "Medium Goal Cash Accumulation Roadmap (₹20,000 - ₹1,00,000)",
+    "category": "vehicle_and_assets",
+    "summary": "Fund consumer electronics, two-wheelers, and appliances with zero-debt cash accumulation within 3 to 8 months.",
+    "key_rules": [
+      "Avoid 0% EMI consumer financing: Hidden processing fees, GST on interest subvention, and credit utilization penalties often apply.",
+      "Accelerate timeline with 25% to 35% discretionary expense reductions rather than debt.",
+      "Target Timeline = Goal Amount / (Monthly Surplus + Discretionary Cut Savings)."
+    ],
+    "detailed_guidance": "For a ₹60,000 two-wheeler or gadget with an existing surplus of ₹7,450/month: at baseline surplus it takes ~8 months. Adding a 25% cut in discretionary spending (+₹2,200/mo) accelerates savings to ₹9,650/mo, reaching the ₹60,000 goal in just 6.2 months with 100% cash ownership and zero debt.",
+    "search_keywords": ["bike", "two wheeler", "gadget", "laptop", "phone", "save 60000", "50000", "buy bike", "medium goal"]
+  },
+  {
+    "id": "tax_optimization_india",
+    "title": "Indian Tax Optimization & Savings Incentives",
+    "category": "tax",
+    "summary": "Maximize tax efficiency under Old and New Tax Regimes to boost net investable surplus.",
+    "key_rules": [
+      "Section 80C (Old Regime): Up to ₹1,50,000 deduction across EPF, PPF, ELSS mutual funds, and life insurance premiums.",
+      "Section 80CCD(1B): Additional exclusive deduction of up to ₹50,000 for National Pension System (NPS) Tier 1.",
+      "New Tax Regime (Section 115BAC): Default regime with lower slab rates and standard deduction of ₹75,000, optimal if total deductions are under ₹3.75L."
+    ],
+    "detailed_guidance": "Evaluating the New vs Old tax regime directly increases take-home salary. Utilizing employer NPS contributions under 80CCD(2) further shields up to 10% of basic salary from tax without locking funds into inefficient insurance-cum-investment schemes.",
+    "search_keywords": ["tax", "80c", "nps", "tax saving", "old regime", "new regime", "income tax", "ppf", "elss"]
+  }
+]

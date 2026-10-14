@@ -1,0 +1,108 @@
+<svg viewBox="0 0 920 620" width="100%" height="620" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="erShadow" x="-2%" y="-2%" width="104%" height="106%">
+            <feDropShadow dx="1" dy="2" stdDeviation="2.5" flood-opacity="0.12"/>
+        </filter>
+        <marker id="crow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#1e3a8a" stroke-width="1.5"/>
+        </marker>
+    </defs>
+
+    <rect width="920" height="620" fill="#f8fafc" rx="8"/>
+
+    <!-- TITLE -->
+    <text x="460" y="32" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="15" font-weight="bold" text-anchor="middle">
+        ENTITY-RELATIONSHIP (ER) DIAGRAM - SPENDWISE AI
+    </text>
+
+    <!-- ENTITY 1: USER / ACCOUNT -->
+    <rect x="40" y="70" width="220" height="175" rx="6" fill="#ffffff" stroke="#1e3a8a" stroke-width="1.8" filter="url(#erShadow)"/>
+    <rect x="40" y="70" width="220" height="30" rx="6" fill="#1e3a8a"/>
+    <text x="150" y="90" fill="#ffffff" font-family="Times New Roman, serif" font-size="11.5" font-weight="bold" text-anchor="middle">USER / ACCOUNT</text>
+    <text x="52" y="122" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">PK  user_id: INTEGER</text>
+    <text x="52" y="142" fill="#334155" font-family="Times New Roman, serif" font-size="9">    username: VARCHAR(50)</text>
+    <text x="52" y="162" fill="#334155" font-family="Times New Roman, serif" font-size="9">    email: VARCHAR(100)</text>
+    <text x="52" y="182" fill="#334155" font-family="Times New Roman, serif" font-size="9">    currency_code: VARCHAR(10)</text>
+    <text x="52" y="202" fill="#334155" font-family="Times New Roman, serif" font-size="9">    monthly_income: FLOAT</text>
+    <text x="52" y="222" fill="#334155" font-family="Times New Roman, serif" font-size="9">    created_at: TIMESTAMP</text>
+
+    <!-- RELATIONSHIP 1: USER OWNS TRANSACTIONS (Diamond) -->
+    <polygon points="360,157 410,132 460,157 410,182" fill="#f0fdf4" stroke="#059669" stroke-width="1.5"/>
+    <text x="410" y="161" fill="#065f46" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold" text-anchor="middle">Owns</text>
+
+    <line x1="260" y1="157" x2="360" y2="157" stroke="#1e3a8a" stroke-width="1.8"/>
+    <text x="275" y="150" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="11" font-weight="bold">1</text>
+
+    <line x1="460" y1="157" x2="560" y2="157" stroke="#1e3a8a" stroke-width="1.8"/>
+    <text x="540" y="150" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="11" font-weight="bold">N</text>
+
+    <!-- ENTITY 2: TRANSACTION -->
+    <rect x="560" y="70" width="240" height="235" rx="6" fill="#ffffff" stroke="#1e3a8a" stroke-width="1.8" filter="url(#erShadow)"/>
+    <rect x="560" y="70" width="240" height="30" rx="6" fill="#1e3a8a"/>
+    <text x="680" y="90" fill="#ffffff" font-family="Times New Roman, serif" font-size="11.5" font-weight="bold" text-anchor="middle">TRANSACTION</text>
+    <text x="572" y="120" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">PK  transaction_id: INTEGER</text>
+    <text x="572" y="139" fill="#0f172a" font-family="Times New Roman, serif" font-size="9.5" font-weight="bold">FK  user_id: INTEGER</text>
+    <text x="572" y="158" fill="#334155" font-family="Times New Roman, serif" font-size="9">    date: VARCHAR(50)</text>
+    <text x="572" y="177" fill="#334155" font-family="Times New Roman, serif" font-size="9">    description: TEXT</text>
+    <text x="572" y="196" fill="#334155" font-family="Times New Roman, serif" font-size="9">    amount: FLOAT</text>
+    <text x="572" y="215" fill="#334155" font-family="Times New Roman, serif" font-size="9">    type: VARCHAR(20) [DEBIT/CREDIT]</text>
+    <text x="572" y="234" fill="#334155" font-family="Times New Roman, serif" font-size="9">    category: VARCHAR(50)</text>
+    <text x="572" y="253" fill="#334155" font-family="Times New Roman, serif" font-size="9">    is_anomaly: BOOLEAN</text>
+    <text x="572" y="272" fill="#334155" font-family="Times New Roman, serif" font-size="9">    anomaly_score: FLOAT</text>
+    <text x="572" y="291" fill="#334155" font-family="Times New Roman, serif" font-size="9">    created_at: TIMESTAMP</text>
+
+    <!-- RELATIONSHIP 2: TRANSACTION HAS EMBEDDING -->
+    <polygon points="680,355 725,330 770,355 725,380" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="725" y="359" fill="#5b21b6" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold" text-anchor="middle">Embeds</text>
+
+    <line x1="680" y1="305" x2="680" y2="355" stroke="#1e3a8a" stroke-width="1.8"/>
+    <line x1="680" y1="355" x2="680" y2="355" stroke="#1e3a8a" stroke-width="1.8"/>
+    <text x="690" y="325" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="11" font-weight="bold">1</text>
+
+    <line x1="725" y1="380" x2="725" y2="430" stroke="#1e3a8a" stroke-width="1.8"/>
+    <text x="735" y="410" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="11" font-weight="bold">1</text>
+
+    <!-- ENTITY 3: RAG_EMBEDDING -->
+    <rect x="610" y="430" width="230" height="140" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8" filter="url(#erShadow)"/>
+    <rect x="610" y="430" width="230" height="28" rx="6" fill="#7c3aed"/>
+    <text x="725" y="449" fill="#ffffff" font-family="Times New Roman, serif" font-size="11" font-weight="bold" text-anchor="middle">RAG_EMBEDDING</text>
+    <text x="622" y="478" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">PK  embedding_id: INTEGER</text>
+    <text x="622" y="497" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">FK  transaction_id: INTEGER</text>
+    <text x="622" y="516" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    chunk_text: TEXT</text>
+    <text x="622" y="535" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    embedding_blob: BLOB (768-d)</text>
+    <text x="622" y="554" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    updated_at: TIMESTAMP</text>
+
+    <!-- RELATIONSHIP 3: USER SETS BUDGET_GOAL -->
+    <polygon points="150,305 195,280 240,305 195,330" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+    <text x="195" y="309" fill="#92400e" font-family="Times New Roman, serif" font-size="8.5" font-weight="bold" text-anchor="middle">Sets</text>
+
+    <line x1="150" y1="245" x2="150" y2="305" stroke="#1e3a8a" stroke-width="1.8"/>
+    <text x="135" y="275" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="11" font-weight="bold">1</text>
+
+    <line x1="195" y1="330" x2="195" y2="430" stroke="#1e3a8a" stroke-width="1.8"/>
+    <text x="205" y="400" fill="#1e3a8a" font-family="Times New Roman, serif" font-size="11" font-weight="bold">N</text>
+
+    <!-- ENTITY 4: BUDGET_GOAL -->
+    <rect x="80" y="430" width="220" height="140" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.8" filter="url(#erShadow)"/>
+    <rect x="80" y="430" width="220" height="28" rx="6" fill="#d97706"/>
+    <text x="190" y="449" fill="#ffffff" font-family="Times New Roman, serif" font-size="11" font-weight="bold" text-anchor="middle">BUDGET_GOAL</text>
+    <text x="92" y="478" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">PK  goal_id: INTEGER</text>
+    <text x="92" y="497" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">FK  user_id: INTEGER</text>
+    <text x="92" y="516" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    category: VARCHAR(50)</text>
+    <text x="92" y="535" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    monthly_limit: FLOAT</text>
+    <text x="92" y="554" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    alert_threshold: FLOAT</text>
+
+    <!-- ENTITY 5: CATEGORY_RULE -->
+    <rect x="345" y="430" width="220" height="140" rx="6" fill="#ffffff" stroke="#059669" stroke-width="1.8" filter="url(#erShadow)"/>
+    <rect x="345" y="430" width="220" height="28" rx="6" fill="#059669"/>
+    <text x="455" y="449" fill="#ffffff" font-family="Times New Roman, serif" font-size="11" font-weight="bold" text-anchor="middle">CATEGORY_RULE</text>
+    <text x="357" y="478" fill="#0f172a" font-family="Times New Roman, serif" font-size="9" font-weight="bold">PK  rule_id: INTEGER</text>
+    <text x="357" y="497" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    pattern: VARCHAR(150)</text>
+    <text x="357" y="516" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    category: VARCHAR(50)</text>
+    <text x="357" y="535" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    priority: INTEGER</text>
+    <text x="357" y="554" fill="#334155" font-family="Times New Roman, serif" font-size="8.5">    is_active: BOOLEAN</text>
+
+    <!-- Connector: Category Rule Classifies Transaction -->
+    <path d="M 455 430 L 455 305 L 560 305" fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="480" y="320" fill="#059669" font-family="Times New Roman, serif" font-size="8.5">Classifies (1:N)</text>
+</svg>
